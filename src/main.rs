@@ -4,7 +4,6 @@ extern crate rocket_contrib;
 
 use rocket_contrib::serve::StaticFiles;
 use rocket::response::NamedFile;
-// use std::path::{Path, PathBuf};
 
 #[get("/")]
 fn index() -> Option<NamedFile> {
