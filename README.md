@@ -1,33 +1,54 @@
-To create a simple Rust web app on macOS, you can use the Rocket web framework. Here's a step-by-step guide:
+# Rust Web Booking App
 
-Install Rust: If you haven't already, install Rust by following the instructions on the official Rust website: https://www.rust-lang.org/tools/install
-Create a New Rust Project: Open your terminal and create a new Rust project by running the following command:
-bash
-Copy code
-cargo new my_web_app --bin
-This command creates a new directory called my_web_app with a Cargo.toml file and a src directory containing a main.rs file.
-Add Rocket to Cargo.toml: Open Cargo.toml in your project directory and add the following lines to the [dependencies] section:
-toml
-Copy code
-[dependencies]
-rocket = "0.5.0-rc.1"
-Edit src/main.rs: Replace the contents of src/main.rs with the following code:
-rust
-Copy code
-#[macro_use] extern crate rocket;
+This repository contains the backend code for a booking application built with the Rust web framework Rocket.
 
-#[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
-}
+## Demo
 
-#[launch]
-fn rocket() -> _ {
-    rocket::build().mount("/", routes![index])
-}
-Build and Run the App: In your terminal, navigate to your project directory and run the following command to build and run your web app:
-bash
-Copy code
+https://crmify.onrender.com 
+
+## Features
+
+Create, read, update, and delete bookings (CRUD)
+Manages bookings in memory (can be adapted for persistent storage)
+Secure data handling (adhere to best practices for security implementation)
+Requirements
+
+Rust installed (https://www.rust-lang.org/tools/install)
+Basic understanding of Rust and Rocket
+Installation
+
+## Clone this repository:
+
+Bash
+git clone https://github.com/skadio1990/rust-web-app.git
+
+ Navigate to the project directory:
+
+Bash
+cd rust-web-app
+
+ Install dependencies:
+
+Bash
+cargo install
+
+Running the application
+
+Start the development server:
+
+Bash
 cargo run
-Access Your Web App: Open your web browser and go to http://localhost:8000. You should see the message "Hello, world!" displayed.
-That's it! You've created a simple Rust web app using the Rocket framework on macOS.
+
+ Access the application in your browser at: http://localhost:8000
+
+## Important Notes
+
+This is a backend application and requires a separate frontend to build the user interface. Consider using JavaScript frameworks like React, Angular, or Vue.js for the frontend.
+This code provides a basic example and requires further adjustments and security implementation for production use.
+Contributing
+
+We welcome contributions to this project! Please create a pull request if you have any improvements or suggestions.
+
+⚖️ License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
